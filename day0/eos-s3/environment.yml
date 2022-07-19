@@ -1,0 +1,23 @@
+name: eos-s3
+channels:
+  - litex-hub
+dependencies:
+  #- litex-hub::yosys=0.15_51_g6318db615=20220317_162926_py37
+  #- litex-hub::symbiflow-yosys-plugins=1.0.0_7_832_ga2a80a1=20220317_162926
+  #- litex-hub::vtr-optimized=8.0.0_5338_g829c06d8f=20220409_131122
+  - make
+  - lxml
+  - simplejson
+  - intervaltree
+  - git
+  - pip
+  # Packages installed from PyPI
+  - pip:
+    - python-constraint
+    - serial
+    - git+https://github.com/QuickLogic-Corp/quicklogic-fasm@aaf4c314a165b6185b0983019d8aae4d0d4db6cb
+    - https://github.com/chipsalliance/f4pga/archive/main.zip#subdirectory=f4pga
+    - yosys
+    - symbiflow-yosys-plugins
+    - vtr-optimized
+  
