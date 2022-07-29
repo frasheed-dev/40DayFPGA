@@ -11,13 +11,13 @@ dependencies:
   - intervaltree
   - git
   - pip
-  # Packages installed from PyPI
+  # Packages installed from PyPpiI
   - pip:
     - python-constraint
     - serial
     - git+https://github.com/QuickLogic-Corp/quicklogic-fasm@aaf4c314a165b6185b0983019d8aae4d0d4db6cb
     - https://github.com/chipsalliance/f4pga/archive/main.zip#subdirectory=f4pga
-    - yosys
-    - symbiflow-yosys-plugins
-    - vtr-optimized
+    #- yosys
+    #- symbiflow-yosys-plugins
+    #- vtr-optimized
   

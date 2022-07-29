@@ -6,8 +6,8 @@
 # GitHub		: https://github.com/frasheed-dev/
 #------------------------------------------------------------------
 
-#INFORMATION:
-#----------- 
+# INFORMATION:
+# ----------- 
 #	(1)	This script is sourced with sudo -s source setup.sh
 #	(2)	setup.sh is developed for:
 #		Hardware: Raspberry Pi 4 Model B Rev 1.4 (4GB RAM) 
