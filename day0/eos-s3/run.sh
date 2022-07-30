@@ -3,7 +3,7 @@
 # This example design features a simple 4-bit counter driving LEDs. 
 
 export F4PGA_INSTALL_DIR=~/opt/f4pga
-FPGA_FAM="eos-s3"
+export FPGA_FAM="eos-s3"
 
 export PATH="$F4PGA_INSTALL_DIR/$FPGA_FAM/quicklogic-arch-defs/bin:$PATH";
 export F4PGA_ENV_BIN="$F4PGA_INSTALL_DIR/$FPGA_FAM/quicklogic-arch-defs/bin";
