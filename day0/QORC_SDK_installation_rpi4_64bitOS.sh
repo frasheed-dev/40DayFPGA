@@ -62,8 +62,9 @@ export PATH=${PWD}/arm_toolchain_install/gcc-arm-none-eabi-10-2020-q4-major/bin:
 # (2.4) QuickLogic TinyFPGA-Programmer-Application
 git clone --recursive https://github.com/QuickLogic-Corp/TinyFPGA-Programmer-Application.git
 pip3 install tinyfpgab
-pip3 install apio
+pip3 install -U apio
 apio drivers --serial-enable
+# Restart OS!
 # temporary alias set for current session (for permenant alias, add the next line with complete path to ~/.bashrc or ~/.bash_profile)
 alias qfprog="python ${PWD}/TinyFPGA-Programmer-Application/tinyfpga-programmer-gui.py"
 # test programmer application with: qfprog --help
@@ -75,4 +76,16 @@ sudo apt-get install putty -y
 #-- 1: already in group
 #-- 0: not in group
 #- to add in dialout group, type: sudo usermod -a -G dialout $USER
+
+# (2.6) Test the QuickFeather USB-CDC Port
+# Verification that the drivers are installed correctly. The details are on the followng link:
+# https://qorc-sdk.readthedocs.io/en/latest/qorc-setup/quickstart.html#test-the-quickfeather-usb-cdc-port
+# Note: I had to check for different USB ports (3.0/2.0) before it appears on my connected usb devices list.
+
+# (2.7) Bootloader Update
+# It is recommended to use the latest bootloader. Details in the following link:
+# https://qorc-sdk.readthedocs.io/en/latest/qorc-setup/quickstart.html#bootloader-update
+# Note: In my case, it was the latest version already (v1.10.0 from May 2021)
+
+# (2.8) Final checks to verify the flashing of Software (for ARM M4 CPU) and Hardware Logic (for eFPGA)
 

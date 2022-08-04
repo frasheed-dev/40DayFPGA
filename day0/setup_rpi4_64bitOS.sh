@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------------------------------------------------
-# Description	: Setup file for installing the Prerequisites for the toolchain (for Raspberry Pi OS based systems).
+# Description	: Setup file for installing the Prerequisites for the FPGA-Development toolchain (for Raspberry Pi OS based systems).
 # Author		: Farhan Rasheed
 # Email			: frasheed.dev@gmail.com
 # GitHub		: https://github.com/frasheed-dev/
@@ -12,7 +12,7 @@
 #		Hardware: Raspberry Pi 4 Model B Rev 1.4 (4GB RAM) 
 #		Software: Raspberry Pi OS (64-bit)  
 #		uname -a: Linux pi4 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64 GNU/Linux
-#		FPGA	: QuickLogic EOS S3
+#		FPGA	: SparkFun Thing Plus (QuickLogic EOS-S3)
 
 # HELPFUL LINKS:
 # -------------
@@ -87,12 +87,9 @@ conda create --name $FPGA_FAM
 #-- export PATH="/opt/vtr/bin:$PATH"
 
 
-#- and (1.5) compiled yosys plugins (QuickLogic QLF FPGAs plugin didn't compile) from f4pga rep.
+#- and (1.5) compiled yosys plugins (Note: QuickLogic QLF FPGAs plugin didn't compile) from f4pga rep.
 # according to f4pga guide, only SystemVerilog plugin (read_system_bverilog, read_uhdm) is required
 #-- https://github.com/chipsalliance/yosys-f4pga-plugins
 
-echo "[LOG]: Installing architecture definitions"
-# (2) Download architecture definitions (for Quicklogic EOS-S3)
-wget -qO- https://storage.googleapis.com/symbiflow-arch-defs-install/quicklogic-arch-defs-qlf-fc5d8da.tar.gz | tar -xzC $F4PGA_INSTALL_DIR/$FPGA_FAM/
-
-echo "DONE!"
+# (2) Download and Install FPGA Specific modules and softwares (in my case SparkFun Thing Plus Quicklogic EOS-S3)
+echo "DONE!\nRead QORC_SDK_installation_rpi4_64bitOS.sh for further Installation on FPGA-specific installations for the development and testing" 
